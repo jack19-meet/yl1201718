@@ -9,17 +9,30 @@ def ex1():
 		turtle.pencolor(color[i])
 		turtle.forward(forw)
 		turtle.right(turn)
-ex1()
+
 
 def ex2():
-	turtle.forward(50)
-	turtle.right(270)
-	turtle.forward(50)
+	turtle.register_shape("pentagon", ((10,0),(10,10),(5,15),(0,10),(0,0)))
+	turtle.shape("pentagon")
+
+	turtle.goto(50,0)
+	turtle.goto(50,50)
+	turtle.goto(25,75)
+	turtle.goto(0,50)
+	turtle.goto(0,0)
 
 
-
-
-
-
+def ex4():
+	for i in range(360):
+		turtle.home()
+		turtle.right(i)
+		turtle.speed(1000000000)
+		turtle.forward(200)
+		turtle.right(45)
+		turtle.forward(100)
+		turtle.right(90)
+		turtle.forward(50)
+		
+ex4()
 
 turtle.mainloop()
