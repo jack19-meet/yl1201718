@@ -26,7 +26,7 @@ def ex4():
 	for i in range(360):
 		turtle.home()
 		turtle.right(i)
-		turtle.speed(1000000000)
+		turtle.speed(1000)
 		turtle.forward(200)
 		turtle.right(45)
 		turtle.forward(100)
