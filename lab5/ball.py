@@ -20,13 +20,13 @@ class Ball(Turtle):
 
     def move(self,width ,height):
         current_x = self.xcor()
-        new_x = current_x + dx
+        new_x = current_x + self.dx
         current_y = self.ycor()
-        new_y = current_y + dy
-        right_side_ball = new_x + radius
-        left_side_ball = new_x - radius
-        top_side_ball = new_y + radius
-        bottom_side_ball = new_y - radius
+        new_y = current_y + self.dy
+        right_side_ball = new_x + self.radius
+        left_side_ball = new_x - self.radius
+        top_side_ball = new_y + self.radius
+        bottom_side_ball = new_y - self.radius
         self.goto(new_x, new_y)
 
         if top_side_ball > height/2:
