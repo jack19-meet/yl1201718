@@ -1,10 +1,10 @@
 from turtle import *
 import random
 import time
-
 colormode(255)
 tracer(0)
 hideturtle()
+
 
 class Ball(Turtle):
     def __init__(self,x ,y ,dx ,dy ,radius):
@@ -20,13 +20,13 @@ class Ball(Turtle):
 
     def move(self,width ,height):
         current_x = self.xcor()
-        new_x = current_x + self.dx
+        new_x = current_x + dx
         current_y = self.ycor()
-        new_y = current_y + self.dy
-        right_side_ball = new_x + self.radius
-        left_side_ball = new_x - self.radius
-        top_side_ball = new_y + self.radius
-        bottom_side_ball = new_y - self.radius
+        new_y = current_y + dy
+        right_side_ball = new_x + radius
+        left_side_ball = new_x - radius
+        top_side_ball = new_y + radius
+        bottom_side_ball = new_y - radius
         self.goto(new_x, new_y)
 
         if top_side_ball > height/2:
